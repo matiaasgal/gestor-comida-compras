@@ -1,0 +1,289 @@
+:root {
+    --primary-component: #2f9e44;
+    --primary-component-light: #6bd67b;
+    --error: #D32F2F;
+    --warning: #FBC02D;
+    --info: #1976D2;
+    --background: #F6F7FB;
+    --background-darksoft: #e8ecf2;
+    --zebra: #F1F8E9;
+    --accent: #f2a93b;
+    --cards: #FFFFFF;
+    --primary-text: #1f2937;
+    --secondary-text: #6b7280;
+    --disabled: #9E9E9E;
+    --border: #e2e8f0;
+    --hover: #8ddf9c;
+}
+
+.inventario-container { 
+    background-color: var(--background);
+    padding: 0 20px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.inventario-anadir-prod {
+    background-color: var(--background-darksoft);
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    border: 1px solid var(--border);
+}
+
+.inventario-anadir-prod h3 {
+    margin-top: 5px;
+}
+.inventario-anadir-prod-title {
+    text-align: center;
+
+    @media (min-width: 542px){
+        text-align: justify;
+    }
+}
+
+.inventario-form {
+    width: 100%;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+
+    @media (min-width: 1074px) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.inventario-form-input {
+    padding: 10px;
+    border-radius: 17px;
+    border: 1px solid var(--border);
+    font-size: 16px;
+    outline: none;
+    transition: all .3s ease-in-out;
+
+    &:focus {
+        border-color: var(--hover);
+    }
+}
+
+.inventario-add-btn {
+    background-color: var(--primary-component);
+    color: white;
+    cursor: pointer;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 14px;
+
+    @media (min-width: 674px) and (max-width: 903px) {
+        grid-column-start: 2;
+    }
+}
+
+.inventario-edit-btn {
+    background-color: var(--warning);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 14px;
+    width: 100%;
+}
+
+.div-controls-edit {
+    justify-content: center;
+}
+@media (min-width: 702px) and (max-width: 911px) {
+    .div-controls-edit{
+        grid-column-start: 2;
+    }
+}
+
+.inventario-cancel-btn {
+    background-color: var(--error);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 14px;
+}
+
+.inventario-add-btn--disabled {
+  background: #aaa;
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.inventario-edit-btn--disabled {
+  background: #aaa;
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.inventario-productos-header {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 542px){
+        display: flex;
+        flex-direction: row;;
+        justify-content: center;
+        gap: 30px;
+        align-items: center;
+    }
+}
+
+.inventario-productos-header-title {
+    margin: 0 0 10px 0;
+    text-align: center;
+
+    @media (min-width: 542px){
+        margin: 10px;
+        text-align: justify;
+    }
+}
+
+.inventario-productos-header-input {
+    flex: .9;
+    padding: 10px;
+    border-radius: 17px;
+    border: 1px solid var(--border);
+    font-size: 16px;
+    outline: none;
+    transition: all .3s ease-in-out;
+
+    &:focus {
+        border-color: var(--hover);
+    }
+}
+
+.inventario-products-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+}
+
+.no-data-card-info {
+    background: var(--cards);
+    padding: 2rem;
+    margin-top: 10px;
+    text-align: center;
+    border-radius: 12px;
+    color: var(--secondary-text);
+    border: none;
+}
+
+.inventario-products-card {
+    text-align: center;
+    padding: 7px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    background-color: var(--cards);
+    border: 1px solid var(--border);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.inventario-product-controls-edit {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+.inventario-products-card-control-header {
+    background: none;
+    padding-left: 2px;
+    border: none;
+    outline: none;
+}
+
+.inventario-products-card-control-header img {
+    width: 23px;
+    height: auto;
+    pointer-events: none;
+}
+
+.inventario-products-card-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+    justify-content: center;
+}
+
+.inventario-products-card-input {
+    width: 60px;
+    text-align: center;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    font-size: 10px;
+    outline: none;
+    
+    &:focus {
+        border-color: var(--hover);
+    }
+}
+
+.inventario-products-card-btn {
+    color: white;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    padding: 5px 8px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Contenedor del popup */
+.my-swal-popup {
+    border-radius: 16px !important;
+    padding: 2rem !important;
+    font-family: Arial, sans-serif;
+}
+
+/* Título */
+.my-swal-title {
+    font-size: 1.5rem !important;
+    font-weight: 700 !important;
+    color: var(--primary-text) !important;
+}
+
+/* Botón de Confirmar (Eliminar) */
+.my-swal-confirm {
+    background-color: var(--error) !important; /* Rojo moderno */
+    color: white !important;
+    border-radius: 8px !important;
+    padding: 12px 24px !important;
+    font-weight: 600 !important;
+    margin-left: 10px !important;
+    border: none !important;
+    transition: background 0.2s;
+}
+
+.my-swal-confirm:hover {
+    background-color: #dc2626 !important;
+}
+
+/* Botón de Cancelar */
+.my-swal-cancel {
+    background-color: #f3f4f6 !important;
+    color: #4b5563 !important;
+    border-radius: 8px !important;
+    padding: 12px 24px !important;
+    font-weight: 600 !important;
+    border: none !important;
+    transition: background 0.2s;
+}
+
+.my-swal-cancel:hover {
+    background-color: #e5e7eb !important;
+}
+
+/* Ajuste del icono */
+.my-swal-icon {
+    border-width: 2px !important;
+}

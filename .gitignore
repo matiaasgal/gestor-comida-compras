@@ -1,0 +1,8 @@
+# Ignorar dependencias de ambas carpetas
+**/node_modules/
+
+# Ignorar variables de entorno
+**/.env
+
+# Archivos del sistema
+.DS_Store

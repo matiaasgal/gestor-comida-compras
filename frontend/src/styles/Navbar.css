@@ -1,0 +1,127 @@
+:root {
+    --primary-component: #2f9e44;
+    --primary-component-light: #6bd67b;
+    --error: #D32F2F;
+    --warning: #FBC02D;
+    --info: #1976D2;
+    --background: #F6F7FB;
+    --background-darksoft: #e8ecf2;
+    --zebra: #F1F8E9;
+    --accent: #f2a93b;
+    --cards: #FFFFFF;
+    --primary-text: #1f2937;
+    --secondary-text: #6b7280;
+    --disabled: #9E9E9E;
+    --border: #e2e8f0;
+    --hover: #8ddf9c;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.navbar-container {
+    padding: clamp(12px, 2vw, 20px);
+    font-family: "Space Grotesk", "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #f7fafc 0%, #eef6f0 100%);
+}
+
+.inventario-header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 16px;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    padding: clamp(10px, 2vw, 18px) clamp(14px, 3vw, 26px);
+    background-color: var(--background-darksoft);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inventario-title {
+    color: var(--primary-text);
+    font-size: clamp(18px, 2.2vw, 24px);
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    margin: 0;
+}
+
+.inventario-logout {
+    display: inline-flex;
+    gap: 8px;
+    align-items: center;
+    background: var(--background-darksoft);
+    border: none;
+    padding: 8px 10px;
+    border-radius: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.inventario-logout:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+.inventario-logout h3{
+    color: var(--primary-text);
+    font-size: clamp(14px, 1.8vw, 18px);
+    margin: 0;
+}
+
+.inventario-logout img {
+    width: clamp(22px, 2.2vw, 28px);
+    height: auto;
+    cursor: pointer;
+}
+
+.nav-links {
+    margin-left: -30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 16px;
+    padding-left: 6px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--secondary-text);
+    font-weight: 600;
+    font-size: clamp(13px, 1.6vw, 16px);
+    padding: 6px 4px;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.nav-link:hover {
+    color: var(--primary-component);
+}
+
+.nav-link.active {
+    color: var(--primary-component);
+    border-bottom: 2px solid var(--primary-component-light);
+}
+
+@media (max-width: 600px) {
+    .inventario-header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .inventario-title {
+        order: 1;
+        text-align: center;
+    }
+
+    .inventario-logout {
+        order: 2;
+        align-self: center;
+    }
+
+    .nav-links {
+        margin-left: -5px;
+        order: 3;
+        justify-content: center;
+        gap: 12px;
+    }
+}

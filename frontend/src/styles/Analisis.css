@@ -1,0 +1,118 @@
+:root {
+    --primary-component: #2f9e44;
+    --primary-component-light: #6bd67b;
+    --error: #D32F2F;
+    --warning: #FBC02D;
+    --info: #1976D2;
+    --background: #F6F7FB;
+    --background-darksoft: #e8ecf2;
+    --zebra: #F1F8E9;
+    --accent: #f2a93b;
+    --cards: #FFFFFF;
+    --primary-text: #1f2937;
+    --secondary-text: #6b7280;
+    --disabled: #9E9E9E;
+    --border: #e2e8f0;
+    --hover: #8ddf9c;
+}
+
+.data-container {
+    padding: 1rem;
+    background-color: var(--background);
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+}
+
+.no-data-card {
+    background: var(--cards);
+    padding: 2rem;
+    text-align: center;
+    border-radius: 12px;
+    color: var(--secondary-text);
+    border: 1px dashed var(--disabled);
+}
+
+.data-container h3 {
+    color: var(--primary-text);
+    margin: 1.5rem 0 1rem;
+    font-size: 1.25rem;
+    border-left: 4px solid var(--primary-component);
+    padding-left: 10px;
+}
+
+.data-container div {
+    width: 100%;
+    overflow-x: auto; /* Permite scroll si la tabla es muy ancha */
+    background: var(--cards);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 400px; /* Asegura que no se amontone en móviles muy pequeños */
+}
+
+/* Cabecera */
+thead {
+    background-color: var(--background-darksoft);
+}
+
+th {
+    text-align: left;
+    padding: 12px 16px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--secondary-text);
+    border-bottom: 2px solid var(--border);
+}
+
+/* Celdas */
+td {
+    padding: 14px 16px;
+    color: var(--primary-text);
+    font-size: 0.95rem;
+    border-bottom: 1px solid var(--border);
+}
+
+/* Efecto Zebra usando tu variable */
+tbody tr:nth-child(even) {
+    background-color: var(--zebra);
+}
+
+/* Estilo para las fechas y cantidades (Badge style) */
+td span {
+    display: inline-block;
+}
+
+td:nth-child(2) {
+    font-weight: 700;
+    color: var(--primary-component);
+}
+
+td:nth-child(3) {
+    color: var(--secondary-text);
+    font-size: 0.85rem;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: var(--border);
+    margin: 2rem 0;
+}
+
+/* Ajustes para Desktop */
+@media (min-width: 768px) {
+    .data-container {
+        padding: 2rem 5rem;
+    }
+    
+    .data-container div {
+        overflow-x: hidden; /* En desktop no suele hacer falta el scroll */
+    }
+}
