@@ -6,3 +6,9 @@
 
 # Archivos del sistema
 .DS_Store
+._*
+Thumbs.db
+
+# Build del frontend
+frontend/dist/
+frontend/build/
